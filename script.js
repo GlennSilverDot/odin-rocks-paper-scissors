@@ -50,12 +50,15 @@ function playRound(humanChoice, computerChoice){
 /*--------------- Code Logic -----------------*/
 
 function playGame(){
-    var humanChosen = getHumanChoice();
-    var computerChosen = getComputerChoice();
+    var humanChosen;
+    var computerChosen;
     var playerScore = 0;
     var computerScore = 0;
 
     for(i = 0; i < 5; i++){
+        humanChosen = getHumanChoice();
+        computerChosen = getComputerChoice();
+
         console.log(playerScore + "  |  " + computerScore);
 
         switch(playRound(humanChosen, computerChosen)){
